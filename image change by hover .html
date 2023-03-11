@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="image.css">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a765be6f9b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="container">
+    <div class="main">
+        <h2 class="bg-primary"> <i class="fa-solid fa-arrow-right"></i> Image change by mouse up or down..</h2>
+        <div class="row">
+            <img src="img/11.jpg" id="Main"  alt="blue" onmouseover="image1()" onmouseout="image2()">
+
+        </div>
+    </div>
+
+    <script>
+        function image1()
+        {
+            document.getElementById("Main").src="img/10.jpg";
+        }
+        function image2()
+        {
+            document.getElementById("Main").src="img/11.jpg";
+        }
+    </script>
+   
+    
+</body>
+</html>

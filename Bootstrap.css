@@ -1,0 +1,20 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.body
+{
+    margin: 50px;
+    padding:50px;
+}
+h2{
+    background-color: blue;
+    text-align: center;
+    color: wheat;
+    width: 70%;
+}
+.row img{
+    width: 50%;
+    height: fit-content;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="lib/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/fontawesome-6.2.1/css/all.min.css">
+<body class="body">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-4 pl-3">
+                <h2>Task</h2>
+            </div>
+            <div class="col-md-8">
+                <button  type="button" class="btn btn-primary btn-lg float" data-bs-toggle="modal" data-bs-target="#modalId">
+                <i class="fa-solid fa-arrow-right"></i>   Click Me</button>
+            </div>
+        </div>
+        <div>
+
+          <div class="table-responsive  display_table">
+            <table class="table list" id="employeeList">
+              <thead class="bg-primary text-white ">
+                <tr>
+                  <th>Id</th>         
+                  <th>Full Name</th>
+                  <th>Designation</th>
+                  <th>Mobile</th>
+                  <th>Salary</th>                      
+                  <th>Edit</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+              </tbody>
+            </table>
+          </div>
+          
+           
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-top modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitleId"><i class="fa-solid fa-user"></i> Muhammad Ali</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="employpage"> 
+              <div class="formdata">
+                
+              <form onsubmit="event.preventDefault();" autocomplete="off">
+                  
+            
+                  <label>Name</label>
+                  <input type="text" class="empname" value=""  placeholder="Employ Name">
+            
+                  <label>Designation</label>
+                  <input type="text" class="designation" value=""  placeholder="Employ Designation">
+            
+                  <label>Mobile</label>
+                  <input type="text" class="mobile" value=""  placeholder="Employ Mobile">
+            
+                  <label>Salary</label>
+                  <input type="text" class="empsalary" value="" placeholder="Employ Salary">
+            
+                  <div>
+                  <button type="button"  value="Submit"  class="button btn btn-primary">Submit</button>
+                  
+                  </div>
+                </form>
+            
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <script src="lib/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    
+    <script src="Form .js"></script>
+    <!-- <script>
+      function createtbl(Employeedata){
+        const table = document.getElementById("tblemp")
+
+        Employeedata.forEach(Employee => {
+          let row = document.createElement("tr");
+          let col = document.createElement("td");
+          col.appendChild(document.createTextNode(Employee.Id));
+          row.appendChild(col);
+
+          let nameCol = document.createElement("td");
+          nameCol.appendChild(document.createTextNode(Employee.Name));
+          row.appendChild(nameCol);
+
+          let depcol = document.createElement("td");
+          depcol.appendChild(document.createTextNode(Employee.Department));
+          row.appendChild(depcol);
+
+          let dtcol =document.createElement("td");
+          dtcol.appendChild(document.createTextNode(Employee.Dtjoin));
+          row.appendChild(dtcol);
+
+          let salcol =document.createElement("td");
+          salcol.appendChild(document.createTextNode(Employee.Salary));
+          row.appendChild(salcol)
+          let subcol  = document.createElement("button");
+          subcol.innerHTML=Employee.Edit;
+          row.appendChild(subcol);
+          let rescol  = document.createElement("button");
+          rescol.innerHTML=Employee.Remove;
+          row.appendChild(rescol);
+
+          table.appendChild(row);
+        });
+      }
+
+      const empHandler = new EmpHandler();
+      const employee = empHandler.GetEmployee();
+      createtbl(employee);
+
+
+    </script> -->
+
+    
+    
+    
+</body>
+</html>

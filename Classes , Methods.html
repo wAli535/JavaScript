@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a765be6f9b.js" crossorigin="anonymous"></script>
+</head>
+<body class="container">
+    <button id="demo1" type="button" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Demo1</button>
+    
+ <!-- <script src="/Class,Methods.js"></script> -->
+    <script>
+        "use strict";
+        const demo1 = document.getElementById("demo1");
+        demo1.addEventListener("click", function() {
+
+    class Person {
+    constructor(name, id, adres,dtbirth) {
+    this.name = name;
+    this.id = id;
+    this.adres = adres;
+    this.dtbirth = dtbirth;
+    }
+    getSummary() {
+    return  `Name : ${this.name}, ID: ${this.id},Address: ${this.adres},Date of Birth : ${this.dtbirth},`;
+    }
+    }
+    class Employee extends Person{
+    constructor(name, id, adres,dtbirth,salary,dtjoin){
+        super(name, id, adres,dtbirth);
+        this.salary = salary;
+        this.dtjoin = dtjoin;
+    }
+     getSummary() {
+        return  `Name : ${this.name}, ID: ${this.id},Address: ${this.adres},Date of Birth : ${this.dtbirth},
+         Salary: ${this.salary},Date of Join : ${this.dtjoin}`;
+        }
+    }
+    class Job extends Employee{
+        constructor(name, id, adres,dtbirth,salary,dtjoin,job,shiftime,location){
+            super(name, id, adres, dtbirth, salary, dtjoin);
+            this.job=job;
+            this.shiftime=shiftime;
+            this.location=location;
+        }
+        getSummary(){
+            return `Name : ${this.name}, ID: ${this.id},Address: ${this.adres},Date of Birth : ${this.dtbirth},
+         Salary: ${this.salary},Date of Join : ${this.dtjoin},Job : ${this.job},
+         Shift Time: ${this.shiftime},Location :${this.location}`;
+        }
+    }
+
+    const Life = new Job("Afzal", 101, "Lahore","21-03-1942"
+    ,300000,"1-02-2023","Mern Stack developer","Evening 2 to 10 " ,"Johar Town Lahore" );
+    document.write(Life.getSummary());
+    });
+    
+
+  
+//         class Student {
+//   constructor(name, rollNo, cellPhone, marks, grade) {
+//     this.name = name;
+//     this.rollNo = rollNo;
+//     this.cellPhone = cellPhone;
+//     this.marks = marks;
+//     this.grade = grade;
+//   }
+
+//   summary() {
+//     return `Name: ${this.name}, Roll Number: ${this.rollNo}, Cell Phone: ${this.cellPhone}, Marks: ${this.marks}, Grade: ${this.grade}`;
+//   }
+// }
+// const student = new Student("Ali", "123", "313-6869535", 90, "A");
+// console.log(student.summary());
+
+//     });
+
+
+
+    // class Student{
+    //     constructor (rollno , name , cellphone , marks ,grade){
+    //         this.rollno = rollno;
+    //         this.name = name;
+    //         this.cellphone = cellphone;
+    //         this.marks = marks;
+    //         this.grade = grade;
+    //     }
+    //     summary(){
+    //         return `Name : ${this.name}, Rollno : ${this.rollno}, Cellphone : ${this.cellphone}, Marks : ${this.marks}
+    //         , Grade : ${this.grade}`;
+    //     }
+    // }
+    // const student = new Student("Ali","121","03136869535", 86 , "A");
+    // document.write(student.summary());
+
+    //     });
+
+
+    // class  Student1{
+    //     constructor(name,rollno,clas,marks,grade){
+    //         this.rollno = rollno;
+    //         this.name = name;
+    //         this.marks = marks;
+    //         this.clas = clas;
+    //         this.grade = grade;
+    //     }
+    //     summary(){
+    //             return `Name : ${this.name},rollno : ${this.rollno},clas : ${this.clas},marks : ${this.marks}
+    //             ,grade : ${this.grade}`;
+    //         }
+    //         ''
+    // }
+    // const student = new Student1("Ali", "!23","MAsters","590","B+");
+    // document.write(student.summary());
+
+
+//SIMPLE 
+     //     const p = {
+        //         "Id": 1,
+        //         "Name": "Lays",
+        //         "BasePrice": 100,
+        //         "Gst": 17,
+        //         "GstAmount": function() {
+        //             return this.BasePrice * this.Gst / 100;
+        //         },
+        //         "finalprice": function() {
+        //             return this.BasePrice + this.GstAmount();
+        //         }
+        //     };
+        //     document.write(`${p.Id},${p.Name},${p.BasePrice},${p.Gst},${p.GstAmount()},${p.finalprice()}`);
+        // });
+
+        // const p1 = {
+        //     "Id" : 1,
+        //     "Name" : "Wavy",
+        //     "BasePrice" : 200,
+        //      "Gst"  : 10,
+        //     "GstAmount" : function(){
+        //         return this.BasePrice * this.Gst/100;
+        //     },
+        //     "FinalPrice" : function(){
+        //         return this.BasePrice + this.GstAmount();
+        //     }
+        // };
+        // document.write(`${p1.Id},${p1.Name},${p1.BasePrice},${p1.Gst},${p1.GstAmount()},${p1.FinalPrice()}`)
+        // });
+
+    //     const p2 = {
+    //         "Id" : 2,
+    //         "Name" :"Milk",
+    //         "Price" : 180,
+    //         "Gst" : 20,
+    //         "GstAmount" : function(){
+    //             return this.Price * this.Gst/100;
+    //         },
+    //         "FinalPrice" : function(){
+    //             return this.Price + this.GstAmount();
+    //         }
+    //     };
+    //     document.write(`${p2.Id},${p2.Name},${p2.Price},${p2.Gst},${p2.GstAmount()},${p2.FinalPrice()}`)
+    // });
+     
+    </script>
+</body>
+</html>
+
+
+
+ 
